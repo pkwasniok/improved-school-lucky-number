@@ -50,7 +50,7 @@ def root():
 
         # Return lucky number in get response
         number = config['class-settings'][class_index]['numbers'][0]
-        return f'{"{"}"response": "{number}"{"}"}'
+        return {"response": number}
     else:
         return '{"response": "class not found"}'
 
@@ -61,7 +61,8 @@ def classes():
     classes = []
     for element in config['class-settings']:
         classes.append(element['name'])
-    return str(classes)
+    print(str(classes))
+    return {"response": classes}
 
 
 if __name__ == '__main__':

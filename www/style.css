@@ -70,6 +70,24 @@ p{
  font-size: 9vw;
 }
 
+.class-selector{
+    margin-left: 2%;
+    color: #bbb4b4;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 2vh;
+    transition: 0.5s;
+}
+
+.class-selected{
+    color: #FFF;
+}
+
+.class-selector:hover{
+    color: white;
+}
+
 @media only screen and (max-width: 800px){
     p{
         font-size: 11vw;
