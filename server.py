@@ -55,5 +55,14 @@ def root():
         return '{"response": "class not found"}'
 
 
+@api.route('/classes', methods=['GET'])
+def classes():
+    config = json.load(open('./config.json'))
+    classes = []
+    for element in config['class-settings']:
+        classes.append(element['name'])
+    return str(classes)
+
+
 if __name__ == '__main__':
     api.run()

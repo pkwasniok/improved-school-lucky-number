@@ -1,0 +1,77 @@
+@keyframes bg_intro{
+    0% {
+        background-position: 0% 50%;        
+    }
+    100%{
+        background-position: 80% 0%;
+    }
+}
+
+@keyframes title_intro{
+    0%{
+        color: transparent;
+        transform: translate(-50%, -100%)
+    }
+    25%{
+        color: white;
+    }
+    100%{
+        transform: translate(-50%,0);
+    }
+}
+
+@keyframes contaniner_intro{
+    0%{
+       transform: translate(-200%,0); 
+    }
+    100%{
+        transform: translate(-50%,0);
+    }
+}
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 35%, rgba(0,212,255,1) 100%);
+    background-size: 200% 200%;
+    background-position: 80% 0%;
+
+    animation-name: bg_intro;
+    animation-duration: 2.5s;
+
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1{
+    color: white;
+
+    animation-name: title_intro;
+    animation-duration: 1s;
+
+    position:absolute;
+    top: 2%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+#container{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #d8d8d8;
+    width: 96%;
+    margin-left: 2%;
+
+    animation-name: contaniner_intro;
+    animation-duration: 3s;
+}
+
+p{
+ font-size: 9vw;
+}
+
+@media only screen and (max-width: 800px){
+    p{
+        font-size: 11vw;
+    }
+}
